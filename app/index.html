@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FunBed</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/fun-bed.css">
+  </head>
+  <body>
+    <script>
+      window.FunBedENV = {{ENV}};
+      window.EmberENV = window.FunBedENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/fun-bed.js"></script>
+    <script>
+      window.FunBed = require('fun-bed/app')['default'].create(FunBedENV.APP);
+    </script>
+  </body>
+</html>
